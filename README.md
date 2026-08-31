@@ -44,4 +44,4 @@ Fichier à installer : `A_INSTALLER_MOI/Meteo_Vita__INSTALLER_MOI.vpk`
 
 ## Releases
 
-Les VPK publiés sont sur la page [Releases](../../releases) du dépôt GitHub.
+Les VPK publiés sont sur la page [Releases](https://github.com/yoyo1306/meteo-vita/releases) du dépôt GitHub.
