@@ -1,0 +1,14 @@
+Météo Vita — FICHIER À INSTALLER
+================================
+Installe UNIQUEMENT :
+
+  Meteo_Vita__INSTALLER_MOI.vpk
+
+Ignore les autres .vpk ailleurs (build/, ux0:data/, etc.).
+
+Sur la Vita (VitaShell) :
+1) Copie ce fichier dans ux0:data/
+2) Sélectionne-le → Install
+3) Bulle LiveArea : "Météo Vita" (Title ID METV00001)
+
+START = quitter l'app.

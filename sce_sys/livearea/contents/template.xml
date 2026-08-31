@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<livearea style="a1" format-ver="01.00" content-rev="6">
+  <livearea-background>
+    <image>bg.png</image>
+  </livearea-background>
+  <gate>
+    <startup-image>startup.png</startup-image>
+  </gate>
+  <!-- Version bas-gauche (feuille LiveArea) -->
+  <frame id="frame2" multi="o" autoflip="0">
+    <liveitem>
+      <text origin="background" align="left" valign="bottom" margin-left="28" margin-bottom="36" word-wrap="off" ellipsis="off">
+        <str size="28" bold="on" color="#000000" shadow="off">Ver. 00.45</str>
+      </text>
+    </liveitem>
+  </frame>
+</livearea>

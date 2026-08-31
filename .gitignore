@@ -1,0 +1,17 @@
+# Ignore build artifacts
+/build/
+/A_INSTALLER_MOI/*.vpk
+*.self
+*.velf
+*.elf
+*.o
+.vscode/
+.idea/
+
+# Clé API Météo-France (ne pas committer)
+/src/mf_secret.h
+
+# Previews / assets générés temporairement
+/assets/*_preview.png
+/assets/refresh.png
+
