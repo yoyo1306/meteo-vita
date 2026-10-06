@@ -6,15 +6,19 @@ export VITASDK=/usr/local/vitasdk
 export PATH="$VITASDK/bin:$PATH"
 
 ROOT="$(cd "$(dirname "$0")/.." && pwd)"
-if [ -d /mnt/c/Users/kevin/Projects/meteo-vita ]; then
-  ROOT=/mnt/c/Users/kevin/Projects/meteo-vita
+
+# vita-pack-vpk / CMake cassent les chemins avec espaces (ex. "Projects Cursor")
+BUILD_ROOT="$ROOT"
+if [[ "$ROOT" == *" "* ]]; then
+  BUILD_ROOT="/tmp/meteo-vita"
+  ln -sfn "$ROOT" "$BUILD_ROOT"
 fi
 
 RELEASE_DIR="$ROOT/A_INSTALLER_MOI"
 RELEASE_NAME="Meteo_Vita__INSTALLER_MOI.vpk"
 
-cd "$ROOT"
-python3 "$ROOT/scripts/gen_livearea_bg.py"
+cd "$BUILD_ROOT"
+python3 "$BUILD_ROOT/scripts/gen_livearea_bg.py"
 mkdir -p build
 cd build
 
@@ -25,7 +29,7 @@ make -j"$(nproc)"
 mkdir -p "$RELEASE_DIR"
 # Nettoie d'anciens VPK dans ce dossier (un seul fichier safe)
 rm -f "$RELEASE_DIR"/*.vpk
-cp -f "$ROOT/build/meteo_vita.vpk" "$RELEASE_DIR/$RELEASE_NAME"
+cp -f "$BUILD_ROOT/build/meteo_vita.vpk" "$RELEASE_DIR/$RELEASE_NAME"
 
 # Petit mémo à côté du VPK
 cat > "$RELEASE_DIR/LISEZMOI.txt" << EOF

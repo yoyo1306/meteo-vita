@@ -1,5 +1,9 @@
+#!/usr/bin/env python3
 import struct
-p = "/mnt/c/Users/kevin/Projects/meteo-vita/build/meteo_vita.vpk_param.sfo"
+from pathlib import Path
+
+root = Path(__file__).resolve().parents[1]
+p = root / "build" / "meteo_vita.vpk_param.sfo"
 data = open(p, "rb").read()
 magic, ver, keyofs, valofs, count = struct.unpack_from("<IIIII", data, 0)
 print("keyofs", keyofs, "valofs", valofs, "count", count)

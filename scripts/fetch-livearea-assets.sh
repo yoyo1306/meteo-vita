@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 set -euo pipefail
 export PATH="/usr/bin:/bin"
-ROOT="/mnt/c/Users/kevin/Projects/meteo-vita"
+ROOT="$(cd "$(dirname "$0")/.." && pwd)"
 mkdir -p "$ROOT/sce_sys/livearea/contents"
 cd "$ROOT/sce_sys"
 curl -fsSL -o icon0.png \
